@@ -3,10 +3,13 @@ import Services from './components/Services';
 import Process from './components/Process';
 import Stats from './components/Stats';
 import FooterCTA from './components/FooterCTA';
+import BackgroundFX from './components/BackgroundFX';
+import Showcase from './components/Showcase';
 
 function App() {
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-300">
+    <div className="min-h-screen bg-slate-950 text-slate-300 relative">
+      <BackgroundFX />
       {/* Nav */}
       <header className="fixed top-0 inset-x-0 z-50 border-b border-white/5 backdrop-blur bg-slate-950/40">
         <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
@@ -17,6 +20,7 @@ function App() {
           <nav className="hidden md:flex items-center gap-6 text-sm">
             <a href="#services" className="hover:text-white">Services</a>
             <a href="#process" className="hover:text-white">Process</a>
+            <a href="#showcase" className="hover:text-white">UI/UX</a>
             <a href="#contact" className="hover:text-white">Contact</a>
             <a href="https://megama.si" target="_blank" className="text-cyan-300 hover:text-cyan-200">Website ↗</a>
           </nav>
@@ -33,6 +37,11 @@ function App() {
       {/* Process timeline */}
       <div id="process">
         <Process />
+      </div>
+
+      {/* UI/UX showcase with images and animations */}
+      <div id="showcase">
+        <Showcase />
       </div>
 
       {/* Technology & trust stats */}
